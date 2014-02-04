@@ -1,3 +1,5 @@
+<!-- Show all publication's -->
+
 <h1>Listing posts</h1>
  
 <table>
@@ -10,11 +12,13 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.text %></td>
+       <td><%= link_to 'Show', post %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
     </tr>    
   <% end %>
   <tr>
     <td>
       <%= link_to 'New post', new_post_path %>
-    </td>
+    </td>    
   </tr>
 </table>
